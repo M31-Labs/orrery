@@ -1,0 +1,11 @@
+# Local Go workspace — per-developer, points at local gosx/canopy/gotreesitter
+# checkouts. Not part of the published module.
+go.work
+go.work.sum
+
+# Build output / binaries
+/dist/
+/orrery
+/orrery-graph
+*.test
+*.out
