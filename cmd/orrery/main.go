@@ -26,8 +26,16 @@ import (
 	"m31labs.dev/orrery/internal/layout"
 )
 
+// defaultRoot is the codebase graphed when a request has no root parameter:
+// $ORRERY_ROOT when set, otherwise the current directory.
+var defaultRoot = func() string {
+	if root := os.Getenv("ORRERY_ROOT"); root != "" {
+		return root
+	}
+	return "."
+}()
+
 const (
-	defaultRoot = "/home/draco/work/orrery"
 	// maxEdges caps the number of line segments sent to the browser so the
 	// payload stays manageable for large graphs.
 	maxEdges = 1000
