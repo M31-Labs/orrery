@@ -40,7 +40,7 @@ go run ./cmd/orrery-graph /path/to/repo   # full graph as JSON
 # output). Until Orrery ships its own build, point GOSX_RUNTIME_ROOT at any
 # gosx v0.27.x dist:
 GOSX_RUNTIME_ROOT=/path/to/gosx/dist go run ./cmd/orrery --port=9010
-# then open  http://localhost:9010/?root=/path/to/any/repo
+# then open  http://localhost:9010/?root=/path/to/any/repo   (default root: $ORRERY_ROOT, else the current directory)
 ```
 
 ## Development
